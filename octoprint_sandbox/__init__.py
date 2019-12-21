@@ -25,8 +25,8 @@ class SandboxPlugin(octoprint.plugin.SettingsPlugin,
 			self._logger.info("SANDBOX-EVENT process::" + event)
 
 			# sleep needed for OctoPrint 1.4
-			import time
-			time.sleep(5)
+			# import time
+			# time.sleep(5)
 			self._plugin_manager.send_plugin_message(self._identifier,
 													 dict(initPrinterDisplay=True)
 													 )
