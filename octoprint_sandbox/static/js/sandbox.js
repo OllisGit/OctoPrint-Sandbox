@@ -13,7 +13,6 @@ $(function() {
         // self.loginStateViewModel = parameters[0];
         // self.settingsViewModel = parameters[1];
 
-
         // receive data from server
         self.onDataUpdaterPluginMessage = function (plugin, data) {
 

@@ -19,19 +19,22 @@ class SandboxPlugin(octoprint.plugin.SettingsPlugin,
 					octoprint.plugin.EventHandlerPlugin):
 
 	def on_event(self, event, payload):
-		self._logger.info("SANDBOX-EVENT: " + event)
+		self._logger.info("Incoming: " + event)
 
-		if event == Events.CLIENT_OPENED:
-			self._logger.info("SANDBOX-EVENT process::" + event)
-
+		# if event == Events.CLIENT_OPENED:
+		if event == Events.USER_LOGGED_IN:
 			# sleep needed for OctoPrint 1.4
-			# import time
-			# time.sleep(5)
+			sleepSeconds = 5
+			self._logger.info("Sleeping for: " + str(sleepSeconds) + "s")
+			import time
+			time.sleep(sleepSeconds)
+
+			self._logger.info("Send MSG client")
 			self._plugin_manager.send_plugin_message(self._identifier,
 													 dict(initPrinterDisplay=True)
 													 )
 
-		self._logger.info("SANDBOX-EVENT processed::" + event)
+		self._logger.info("Processed::" + event)
 
 	##~~ SettingsPlugin mixin
 	def get_settings_defaults(self):
