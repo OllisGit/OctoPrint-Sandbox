@@ -1,0 +1,18 @@
+<div id="tab_sandbox">
+
+    Single - IconPicker
+    <div class="input-prepend input-block-level">
+        <span class="add-on" style="width: 25px;"><i class="fa-lg" data-bind="css: mySelectedIcon"></i></span>
+        <input id="myIconPicker" type="text" class="input-large text-right" data-bind="value: mySelectedIcon"/>
+    </div>
+
+
+    Multi-IconPicker
+    <div data-bind="foreach: allIcons">
+      <div class="input-prepend input-block-level">
+        <span class="add-on" style="width: 25px;"><i class="fa-lg" data-bind="css: iconName"></i></span>
+        <input type="text" class="supericonpicker input-large text-right" data-bind="textInput: iconName"/>
+      </div>
+    </div>
+
+</div>

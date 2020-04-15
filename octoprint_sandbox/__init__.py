@@ -47,8 +47,16 @@ class SandboxPlugin(octoprint.plugin.SettingsPlugin,
 		# Define your plugin's asset files to automatically include in the
 		# core UI here.
 		return dict(
-			js=["js/sandbox.js"],
-			css=["css/sandbox.css"],
+			js=[
+				"js/fontawesome-iconpicker.js",
+				"js/sandbox.js"
+			],
+			css=[
+				"css/fontawesome.css",
+				"css/fontawesome-iconpicker.css",
+				# "css/fontawesome-iconpicker.min.css",
+				"css/sandbox.css"
+			],
 			less=["less/sandbox.less"]
 		)
 
